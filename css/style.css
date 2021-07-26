@@ -6,12 +6,21 @@
     text-decoration: none;
     list-style: none;
 }
+body{
+    overflow: hidden;
+    zoom: 1.25;
+}
+.screen{
+    overflow: hidden;
+    height: fit-content;
+    width: fit-content;
+}
 #bg{
     position: fixed;
     background: radial-gradient(ellipse at center, #FA5C15 0%, #ff7a3c 100%);
 }
 main{
-    width: 100%;
+    width: 1536px;
     height: 100vh;
 }
 .header{
@@ -53,6 +62,9 @@ main{
     justify-content: space-evenly;
     align-items: center;
 }
+.prices__table__container{
+    width: 1536px !important;
+}
 .prices__table{
     border-radius: 30px;
     background: rgba(255, 143, 114, 0.6); backdrop-filter: blur(10px);
@@ -92,4 +104,159 @@ main{
     padding: 0 14px;
     display: flex;
     justify-content: space-between;
+    z-index: 10;
+}
+.clock{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    color: white;
+}
+.socialMedias{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+.socialMedia{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: white;
+    padding: 0 0 0 32px;
+    display: flex;
+    align-items: center;
+}
+.socialMedia i{
+    font-size: 43px;
+    margin-right: 7px;
+}
+aside{
+    width: 100vw;
+    height: 100vh;
+}
+.header--small{
+    padding: 30px 70px;
+    width: 100%;
+}
+.header__logo--small{
+    height: 97px;
+    width: 97px;
+}
+.header__logo--small img{
+    height: 78px;
+    width: 78px;
+}
+.header__spfyPopUp{
+    font-size: 55px;
+    color: #1CEB66;
+    height: 75px;
+    min-width: 210px;
+    width: fit-content;
+    padding: 0 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+    background: rgba(255, 143, 114, 0.6); backdrop-filter: blur(10px);
+}
+.spfyInfo{
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    text-align: center;
+}
+.spfyInfo h3{
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: 1.3px;
+}
+.spfyInfo p{
+    font-weight: 300 !important;
+    font-size: 16px;
+    letter-spacing: 0;
+    margin-top: 6px;
+}
+.pizzaOffer{
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0 70px;
+    margin-top: 50px;
+}
+.pizzaDesc{
+    color: white;
+}
+.pizzaDesc p{
+    font-family: "century-gothic", sans-serif;
+    font-size: 64px;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+.li{
+    font-family: 'Raleway', sans-serif;
+    font-size: 48px;
+    font-weight: 300;
+    margin: 28px 0 28px 80px;
+}
+.pizzaPicture{
+    height: 500px;
+    width: 500px;
+    background: rgba(255, 143, 114, 0.6); backdrop-filter: blur(10px);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pizzaPicture img{
+    width: 456px;
+    height: 456px;
+}
+.promo{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0 95px;
+}
+.promo__card{
+    width: 370px;
+    height: 540px;
+    margin-top: 34px;
+    overflow: hidden;
+    background: rgba(255, 143, 114, 0.6); backdrop-filter: blur(10px);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.promo__card img{
+    height: 240px;
+    width: 240px;
+}
+.promo__card p{
+    text-align: center;
+    font-family: "century-gothic", sans-serif;
+    font-size: 28px;
+    color: white;
+    line-height: 40px;
+}
+.promo__card p b{
+    font-family: 'Raleway', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+}
+.promo__card--focus{
+    zoom: 1.14;
+    margin-top: 0;
+}
+.sectionTwo{
+    width: 1536px;
+    height: 100vh;
+}
+.slideSecTwo{
+    width: 100% !important;
 }

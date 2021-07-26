@@ -125,19 +125,66 @@ function onResize() {
 window.onload = onLoad;
 window.onresize = onResize;
 
+//clock
+function currentTime() {
+    var date = new Date();
+    var hour = date.getHours();
+    var min = date.getMinutes();
+    hour = updateTime(hour);
+    min = updateTime(min);
+    document.getElementById("clock").innerText = hour + ":" + min; 
+      var t = setTimeout(function(){ currentTime() }, 1000);
+}
+  
+  function updateTime(k) {
+    if (k < 10) {
+      return "0" + k;
+    }
+    else {
+      return k;
+    }
+}
+  
+  currentTime();
 
+//swipper 
 
-//swipper
+delayOne = 7000;
+delayTwo = 4000;
 
-var swiper = new Swiper(".pricesSwiper", {
-    spaceBetween: 30,
-    centeredSlides: true,
+var swiperOne = new Swiper(".pricesSwiper", {
     autoplay: {
-      delay: 7000,
+      delay: delayOne,
       disableOnInteraction: false,
     },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
     },
-  });
+});
+var swiperTwo = new Swiper(".secTwoSwipper", {
+    autoplay: {
+      delay: delayTwo,
+      disableOnInteraction: false,
+    },
+});
+var swiperMaster = new Swiper(".swiperMaster", {
+    direction: "vertical",
+});
+
+swiperOne.on("reachEnd", ()=> {
+    if (swiperMaster.activeIndex == 0){
+        setTimeout(() =>{
+            swiperMaster.slideNext(500)
+            swiperTwo.slideTo(0, 500)
+        }, delayOne)
+    }
+})
+swiperTwo.on("reachEnd", ()=> {
+    if (swiperMaster.activeIndex == 1){
+        setTimeout(() =>{
+            swiperMaster.slidePrev(500)
+            swiperOne.slideTo(0, 500)
+        }, delayTwo)
+    }
+})
